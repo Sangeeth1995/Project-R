@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<head>
+	<title>CEC</title>
+	
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static '/static/css/new.css' %}" />
+	<link href="/static/css/bootstrap.min.css"  rel="stylesheet"></link>
+	<link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+	<link href="/static/css/new.css" rel="stylesheet"></link>
+	<script src="/static/js/bootstrap.js"></script>
+	<script src="/static/js/jquery-1.12.4.min.js"></script>
+
+
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" 
+	role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand font0" href="index.html">College Of Engineering Chengannur</a>
+			</div>
+			<div class="navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href='/about'>About</a>
+					</li>
+					<li>
+						<a href='/department'>Department</a>
+					</li>
+					<li>
+						<a href='/contact'>Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid">
+ 	<div class="row">
+		<div class="col-sm-12">
+
+<div id="my-slides" class= "carousel slide" data-ride="carousel ">
+<!--controls for bullet to change pages-->
+<ol class="carousel-indicators">
+	<li data-target="#my-slides" data-slide-to="0" class="active"> </li>
+	<li data-target ="my-slides" data-slide-to="1"> </li>
+</ol>
+
+
+<!--Controls for Wrapper inner lahyer adn the pictures correspondind to number of divs-->
+ 	<div class="carousel-inner " role="listbox">
+ 		<div class="item active">
+ 			<img src="/static/images/123.JPG" alt="cars"/>
+ 			<div class="carousel-caption">
+ 				<h1> THE GRANDEUR OF CEC </h1>
+ 			</div>
+ 		</div>
+ 			<div class="item">
+ 			<img src="/static/images/bmw2.jpg" alt="cars"/>
+ 				<div class="carousel-caption">
+ 				<h2> CARS THAT LOOK STUNNING.</h2>
+ 				</div>
+ 			</div>	
+ 	</div>	
+
+<!--Controls for left and right nav buttons-->
+	 <a href="#my-slides" class=" left carousel-control" role="button" data-slide="prev">
+	 	<i style="color:black" class="glyphicon glyphicon-new-window"></i>
+ 	<span class= "glyphicon glyphicon-chevron-left"  aria-hidden="true"></span>
+ 	<span class="sr-only"> Previous</span>
+	</a>
+	<a href="#my-slides" class=" right carousel-control" role="button" data-slide="next">
+	 <span class= "glyphicon glyphicon-chevron-right"  aria-hidden="true"> </span>
+	 <span class="sr-only">Next</span>
+	 </a>
+</div > 
+
+	<div class="row">
+			<h1 class="col-lg-12"></h1>
+		</div>
+		<div class="col-md-4 font1">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h4>About</h4>
+				</div>
+				<div class="panel-body">
+					<p>
+						Admission to the courses is on an annual basis ansd is based on All Kerala Commomn Entrance Examinations conducted by the Controller of the Entrance Examinations ,Govt. Of kerala .The admissions  to the free /Merit seats 50% and manaagment seats 35% adn the ramining 15% seats come under the NRI quota.
+					</p>
+					<a href="#" class="btn btn-warning">Learn More</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 font1">
+			<div class="panel panel-danger">
+				<div class="panel-heading">
+					<h4>History</h4>
+				</div>
+				<div class="panel-body">
+					<p>
+						College of Engineering, Chengannur being located in Chengannur town, Alleppey district is a premier institute
+						of engineering that has carved a niche for itself in the field of technical education in a very short span of time.
+						Since its inception in 1993, under the aegis of IHRD, approved by AICTE and recognized by CUSAT
+					</p>
+					<a href="#" class="btn btn-primary">Learn More</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 font1">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h4>LOG IN HERE</h4>
+				</div>
+				<div class="panel-body">
+					<!-- <form action="" method="post">
+						<input type="text" name="Username" placeholder="Username"/> 
+						<p></p>
+						<p></p> 
+						<p></p>
+						<!-- <input type="password" name="password" placeholder= "password"> -->
+					<!-- </form> -->
+					<p></p>
+					<!-- <a href='profile' class="btn btn-danger">log in</a> -->
+					<form method="post">
+	{{form.as_p }}
+	<input type="submit" name="Submit" value="Login">
+	</br>
+	<p></p>
+		 <input type="submit" class="submit" name="submit" onClick="this.form.action='{% url 'register' %}'" value="SIGN UP" />
+	
+</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	</div> 
+
+
+</body>
+</html>
+
+

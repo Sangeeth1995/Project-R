@@ -1,0 +1,97 @@
+<html>
+<head>
+	<title>Register</title>
+
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static '/static/css/new.css' %}" />
+	<link href="/static/css/bootstrap.min.css" rel="stylesheet"></link>
+	<link href="/static/css/new.css" rel="stylesheet"></link>
+	<!-- <script src="/static/js/bootstrap.js"></script> -->
+	<!-- <script src="/static/js/jquery-1.12.4.min.js"></script> -->
+
+
+
+
+
+	<!-- <link href="css/bootstrap.min.css" rel="stylesheet"></link> -->
+	<!-- <link href="css/new.css" rel="stylesheet"></link> -->
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" 
+	role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand font0" href="index.html">College Of Engineering Chengannur</a>
+			</div>
+			<div class="navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="about.html">About</a>
+					</li>
+					<li>
+						<a href="department.html">Department</a>
+					</li>
+					<li>
+						<a href="contact.html">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+<!-- <p>
+	
+</p>
+<p>
+	
+
+</p>
+<div>
+	<p>
+		
+	</p>
+</div>
+<div>
+	<p>
+		
+	</p>
+</div>
+ -->
+	<div class="container font3">
+		<div class="row">
+			<class="col-lg-12">
+		</div>
+
+			<!-- <form action="http://www.google.com" method="get"><br><br><br> -->
+		<div class="row">
+			<div style ="background-color:white;padding:50px" ></div>
+			
+			<div>
+			<form method='post'>
+			{%csrf_token%}
+			{{form.as_p}}
+			<!-- <input type="submit" name="Submit"> -->
+
+			<input type="submit" class="submit" name="submit" onClick="this.form.action='{% url 'login' %}'" value="Submit" />
+
+			</form>
+			</div>
+
+
+		</div>
+
+
+			<!-- <h1>REGISTER USER</h1><br>
+  			User name     :<input type="text" name="fname" placeholder="Name"><br><br>
+  			Date of birth :<input type="text" placeholder="dd/mm/yy"> <br><br>
+  			Email ID      :<input type="text" placeholder="email@Example.com"><br><br>
+  			Mobile Number :<input type="number"><br><br>
+  			Branch        :<input type="text" placeholder=""><br><br>
+  			Semester      :<input type="text" placeholder=""><br><br>
+  			Batch         :<input type="text" placeholder=""><br><br><br><br>
+			<input type="submit" value="Submit"> -->
+			</form>
+		
+	</div>	
+</body>
+
+</html>
